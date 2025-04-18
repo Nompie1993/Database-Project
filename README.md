@@ -115,8 +115,9 @@ SELECT * FROM Courses;
 
 - Add new data as needed using INSERT INTO statements.
 
-## 
+## link to ERD
 
+[ERD] (https://drive.google.com/file/d/1brAHACbtO0VsMMFb5ScvRWA6a2XamvSi/view?usp=drive_link)
 ---
 
 
