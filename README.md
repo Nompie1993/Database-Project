@@ -5,8 +5,8 @@
 
 ##  Overview
 
-Design and implement a full-featured database using only MySQL.
-The PLP_Student Database Management System is designed to organize, store, and manage information about students, courses, departments, and enrollments efficiently
+- Design and implement a full-featured database using only MySQL.
+- The PLP_Student Database Management System is designed to organize, store, and manage information about students, courses, departments, and enrollments efficiently
 
 ---
 
@@ -33,9 +33,9 @@ Relationships (1-1, 1-M, M-M where needed)
 
 ## Description of what your project does
 
-Stores Student Data:Keeps detailed records of students, including names, emails, and their associated departments.
-Manages Courses:Maintains a list of courses
-Tracks Enrollments:Records which students are enrolled in which courses, the enrollment dates.
+- Stores Student Data:Keeps detailed records of students, including names, emails, and their associated departments.
+- Manages Courses:Maintains a list of courses
+- Tracks Enrollments:Records which students are enrolled in which courses, the enrollment dates.
 
 ----
 
@@ -83,8 +83,9 @@ Prerequisites:
 ## Step-by-Step Guide:
 1. Create the Database:
 - Open your MySQL client (e.g., Workbench or Command Line).
-- Create a new database for the project:CREATE DATABASE StudentRecordsDB;
-USE StudentRecordsDB;
+- Create a new database for the project:
+- CREATE DATABASE PLP_StudentsDB;
+- USE PLP_StudentsDB;
 
 
 2. Import the .sql File:
@@ -104,11 +105,12 @@ SELECT * FROM Courses;
 
 
 4. Use the Database:
-- Perform queries to retrieve information, e.g.:- List all students enrolled in a specific course:SELECT Students.FirstName, Students.LastName, Courses.CourseName
-FROM Enrollments
-JOIN Students ON Enrollments.StudentID = Students.StudentID
-JOIN Courses ON Enrollments.CourseID = Courses.CourseID
-WHERE Courses.CourseName = 'Data Structures';
+- Perform queries to retrieve information, e.g.:- List all students enrolled in a specific course:
+- SELECT Students.FirstName, Students.LastName, Courses.CourseName
+ -- FROM Enrollments
+  -- JOIN Students ON Enrollments.StudentID = Students.StudentID
+   -- JOIN Courses ON Enrollments.CourseID = Courses.CourseID
+    --WHERE Courses.CourseName = 'Data Structures';
 
 
 - Add new data as needed using INSERT INTO statements.
