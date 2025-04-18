@@ -1,5 +1,7 @@
 #   Database Design & SQL Programming Project
-### By Nompie Mthomebni Dube
+---
+### By Nompie Mthombeni Dube
+---
 
 ##  Overview
 
@@ -70,10 +72,48 @@ Entities:
 
 ## How to run/setup the project (or import SQL)
 ---
-## Prerequisites:
+To set up and run the Student Records Database Management System using MySQL, follow these steps:
+Setup and Running Steps
+Prerequisites:
+- Install MySQL Server and a client tool (e.g., MySQL Workbench or Command-Line Client).
+- Ensure you have access to the .sql file containing the database creation script and sample data.
 
-Install MySQL Server and a client tool (e.g., MySQL Workbench or Command-Line Client).
-Ensure you have access to the .sql file containing the database creation script and sample data.
+---
+
+## Step-by-Step Guide:
+1. Create the Database:
+- Open your MySQL client (e.g., Workbench or Command Line).
+- Create a new database for the project:CREATE DATABASE StudentRecordsDB;
+USE StudentRecordsDB;
+
+
+2. Import the .sql File:
+- Execute the .sql file to create tables and populate them with sample data.
+- If using MySQL Workbench:- Go to File > Open SQL Script and select the .sql file.
+- Click Execute to run the script.
+
+- If using the command line:- Navigate to the directory containing the .sql file.
+- Run:mysql -u your_username -p StudentRecordsDB < path/to/student_records.sq
+
+
+3. Verify the Setup:
+- Check if all tables have been created:SHOW TABLES;
+
+- Query the tables to confirm sample data:SELECT * FROM Students;
+SELECT * FROM Courses;
+
+
+4. Use the Database:
+- Perform queries to retrieve information, e.g.:- List all students enrolled in a specific course:SELECT Students.FirstName, Students.LastName, Courses.CourseName
+FROM Enrollments
+JOIN Students ON Enrollments.StudentID = Students.StudentID
+JOIN Courses ON Enrollments.CourseID = Courses.CourseID
+WHERE Courses.CourseName = 'Data Structures';
+
+
+- Add new data as needed using INSERT INTO statements.
+
+## 
 
 ---
 
